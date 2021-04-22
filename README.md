@@ -2,12 +2,13 @@
 Hosting Grafana with Influx DB backing in Docker Containers. Just messing around.
 
 The goal here is to be able to have a light weight data gathering end point that is flexible to begin collecting custom data and visualizing it.
-__Goals__
+
+## Goals
 * Have an easy setup that is useable for any system in the network to begin collecting data.
 * Have visualizations to be able to prove ideas instead of guessing.
 * Be reliable in a development environment.
 
-__Non-Goals__
+## Non-Goals
 * Scale. This is meant to be scrappy until a team requires an expert in data engineering.
 * Be reliable in a production environment. This might come given the technologies, but this is not testing that.
 
@@ -24,6 +25,8 @@ Following instructions from: https://towardsdatascience.com/get-system-metrics-f
     1. `cd opt/monitoring`
     1. `docker-compose up -d`
         1. This will only look recursively upwards. That's why `docker-compose.yml` is in the root.
+
+At this point, you are running InfluxDB and Grafana. The Grafana web UI can be located at [localhost:3000](localhost:3000)
 
 1. When adding the data source, the initialized DB is setup by running the `influxDB` container image. This automatically creates a DB named `telegraf` with credentials for 
 user: `telegraf` 
