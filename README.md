@@ -28,6 +28,7 @@ Following instructions from: https://towardsdatascience.com/get-system-metrics-f
 
 At this point, you are running InfluxDB and Grafana. The Grafana web UI can be located at [localhost:3000](localhost:3000)
 
+1. To login to Grafana UI, the default username:password are: `admin`:`admin`
 1. When adding the data source, the initialized DB is setup by running the `influxDB` container image. This automatically creates a DB named `telegraf` with credentials for 
 user: `telegraf` 
 password: `password`
